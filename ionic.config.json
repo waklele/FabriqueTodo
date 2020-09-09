@@ -1,0 +1,7 @@
+{
+  "name": "FabriqueTodo",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

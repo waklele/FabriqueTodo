@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button menu="m1"></ion-menu-button>
+    </ion-buttons>
+    <ion-title>New to-do</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+  <br>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12">
+        <!-- <form [formGroup]="createForm" (ngSubmit)="simpanData()">
+          <ion-label>Title</ion-label>
+          <ion-input type="text" formControlName="title" [(ngModel)]="title" required></ion-input>
+          <br>
+          <ion-label>Deadline</ion-label>
+          <ion-input type="text" formControlName="deadline" [(ngModel)]="deadline" required></ion-input>
+          <ion-toggle slot="start" name="high" checked></ion-toggle>
+          <div class="errorUi" *ngFor="let error of errorMessages.title || errorMessages.deadline ">
+            <ng-container *ngIf="title.hasError(error.type) && (title.dirty || title.touched)
+            || deadline.hasError(error.type) && (deadline.dirty || deadline.touched) ">
+              <ion-row>
+                <ion-col class="error-message" size="12">
+                  {{ error.message }}
+                </ion-col>
+              </ion-row>
+            </ng-container>
+          </div>
+          <ion-button [disabled]="!createForm.valid" type="submit" expand="block">Create</ion-button>
+        </form> -->
+
+          <ion-label>Title</ion-label>
+          <ion-input clearInput type="text" [(ngModel)]="title"></ion-input>
+          <br>
+          <ion-label>Deadline</ion-label>
+          <ion-input clearInput type="text" [(ngModel)]="deadline"></ion-input>
+          <ion-text class="para" >High Priority?</ion-text><ion-toggle color="secondary" [(ngModel)]="high" ></ion-toggle>
+          <ion-button expand="block" (click)="simpanData()">Create</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>

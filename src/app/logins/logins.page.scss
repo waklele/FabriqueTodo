@@ -1,0 +1,35 @@
+h1 {
+    margin-top: 150px;
+    margin-bottom: 50px;
+    font-size: 50px;
+    font-family: Century Gothic;
+    text-align: center;
+    color: var(--ion-color-primary);
+}
+
+ion-button {
+    margin: 20px;
+    width: auto;
+    height: 50px;
+    color: var(--ion-color-light);
+}
+
+ion-label {
+    margin: 20px;
+}
+
+ion-input {
+    width: auto;
+    font-size: 18px;
+    margin: 20px;
+    border: 1px solid var(--ion-color-light-shade);
+    background-color: var(#ffffff);
+    border-radius: 5px;
+    padding: 40px;
+    color: var(--ion-color-dark);
+}
+
+.error-message{
+    text-align: center;
+    color: var(--ion-color-danger);
+}

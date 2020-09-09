@@ -1,0 +1,71 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button menu="m1"></ion-menu-button>
+    </ion-buttons>
+    <ion-title>All Todo</ion-title>
+    <ion-buttons slot="primary">
+      <ion-button>
+        <ion-icon name="hammer"></ion-icon>
+        <ion-badge slot="end" color="danger">666</ion-badge>
+      </ion-button>
+    </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+  <!-- <ion-card>
+    <ion-row>
+      <ion-col size="6">
+        <ion-card-header>
+          <ion-card-title>Wash Clothes</ion-card-title>
+          <ion-card-subtitle class="sub">by 30 March 2020 <ion-icon name="alert-circle" class="icon-priority"
+              color="danger"></ion-icon>
+          </ion-card-subtitle>
+        </ion-card-header>
+      </ion-col>
+      <ion-col size="3">
+        <ion-button>
+          <ion-buttons slot="end">
+            <ion-icon name="checkmark" color="medium"></ion-icon>
+          </ion-buttons>
+        </ion-button>
+      </ion-col>
+      <ion-col size="3">
+        <ion-button>
+          <ion-buttons slot="end">
+            <ion-icon name="trash" color="medium"></ion-icon>
+          </ion-buttons>
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-card> -->
+
+  <ion-list class="list" *ngFor="let item of listDataTodo">
+    <ion-item class="card" slot="none">
+      <ion-label class="title">
+        {{item.title}}
+        <br>
+        <span class="space-left">
+          <ion-text color="dark" class="space-left">
+            by {{item.deadline}} <ion-icon name="alert-circle" class="icon-priority" color="danger"></ion-icon>
+          </ion-text>
+        </span>
+      </ion-label>
+      <ion-buttons slot="end" (click)="jadiDone(item)">
+        <ion-icon name="checkmark" color="secondary"></ion-icon>
+      </ion-buttons>
+      <ion-buttons slot="end" (click)="hapusDataTodo(item)">
+        <ion-icon name="trash" color="medium"></ion-icon>
+      </ion-buttons>
+    </ion-item>
+  </ion-list>
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed" (click)="goTambahTodo()">
+    <ion-fab-button>
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+</ion-content>

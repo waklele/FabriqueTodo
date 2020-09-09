@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button menu="m1"></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Home</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12">
+        <h1>What would you like to do</h1>
+      </ion-col>
+      <ion-col size="12">
+        <form>
+          
+          <ion-button expand="block" (click)="toTodo()">See all to-do</ion-button>
+          <br>
+          <ion-button expand="block" (click)="toNew()">New to-do</ion-button>
+
+
+        </form>
+        
+      </ion-col>
+      <ion-col size="12">
+        <h2>10</h2>
+      </ion-col>
+      <ion-col size="12">
+        <h2>Unfinished To-do</h2>
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
+</ion-content>

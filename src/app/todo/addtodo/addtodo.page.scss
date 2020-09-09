@@ -1,0 +1,26 @@
+ion-label {
+    margin: 20px;
+}
+
+ion-input {
+    width: auto;
+    font-size: 18px;
+    margin: 20px;
+    border: 1px solid var(--ion-color-light-shade);
+    background-color: var(#ffffff);
+    border-radius: 5px;
+    padding: 40px;
+    color: var(--ion-color-dark);
+}
+
+ion-button {
+    margin: 20px;
+    width: auto;
+    height: 50px;
+    color: var(--ion-color-light);
+}
+
+.para {
+    margin-top: 40px;
+    margin-left: 20px;
+}
